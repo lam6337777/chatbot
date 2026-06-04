@@ -1,0 +1,201 @@
+**CHÍNH SÁCH BẢO MẬT THÔNG TIN**
+
+**1. MỤC ĐÍCH VÀ PHẠM VI THU THẬP THÔNG TIN**
+
+PF cam kết bảo vệ thông tin cá nhân của khách hàng. Việc thu thập dữ liệu chỉ nhằm mục đích phục vụ giao dịch, nâng cao trải nghiệm mua sắm và liên lạc với khách hàng khi cần thiết.
+
+**a) Các loại thông tin chúng tôi thu thập:**
+
+- **Thông tin cá nhân:** Họ tên, số điện thoại, email, địa chỉ nhận hàng, ngày sinh (tùy chọn), giới tính.
+- **Thông tin tài khoản:** Tên đăng nhập, mật khẩu (được mã hóa), lịch sử mua hàng, địa chỉ giao hàng mặc định.
+- **Thông tin thanh toán:** Thông tin thẻ tín dụng/ghi nợ (được xử lý qua cổng thanh toán đối tác, PF không lưu trữ), số tài khoản ngân hàng (khi yêu cầu hoàn tiền), lịch sử giao dịch.
+- **Thông tin thiết bị và duyệt web:** Địa chỉ IP, loại trình duyệt, hệ điều hành, trang web giới thiệu, thời gian truy cập, các trang đã xem, hành vi duyệt web (thông qua cookie).
+- **Thông tin tương tác:** Đánh giá sản phẩm, bình luận, phản hồi khảo sát, tin nhắn qua chat, email hỗ trợ.
+- **Thông tin từ mạng xã hội:** Khi đăng nhập bằng tài khoản Facebook/Google, chúng tôi có thể nhận tên, email, ảnh đại diện (theo phạm vi bạn cho phép).
+
+**b) Phương thức thu thập:**
+- Trực tiếp từ khách hàng khi đăng ký tài khoản, đặt hàng, đăng ký nhận tin, tham gia khảo sát.
+- Tự động thông qua cookie và công nghệ theo dõi khi khách hàng truy cập website.
+- Từ các đối tác chiến lược (với sự đồng ý của khách hàng).
+
+**2. MỤC ĐÍCH SỬ DỤNG THÔNG TIN**
+
+PF sử dụng thông tin của khách hàng cho các mục đích sau:
+
+**a) Xử lý giao dịch và cung cấp dịch vụ:**
+- Xác nhận đơn hàng, xử lý thanh toán, giao hàng.
+- Hỗ trợ khách hàng qua hotline, email, chat.
+- Giải quyết khiếu nại, bảo hành, đổi trả sản phẩm.
+
+**b) Cải thiện trải nghiệm người dùng:**
+- Cá nhân hóa nội dung, đề xuất sản phẩm phù hợp với sở thích.
+- Tối ưu hóa giao diện và tính năng website.
+- Phân tích hành vi mua sắm để cải thiện chất lượng dịch vụ.
+
+**c) Marketing và truyền thông:**
+- Gửi thông tin khuyến mãi, sản phẩm mới, sự kiện đặc biệt (chỉ khi khách hàng đồng ý nhận tin).
+- Chạy quảng cáo tiếp thị lại trên các nền tảng đối tác (Google, Facebook, Instagram).
+- Thực hiện khảo sát, nghiên cứu thị trường.
+
+**d) An ninh và phòng chống gian lận:**
+- Phát hiện và ngăn chặn các giao dịch gian lận, truy cập trái phép.
+- Xác thực danh tính khi có yêu cầu thay đổi thông tin quan trọng.
+- Tuân thủ quy định pháp luật về phòng chống rửa tiền, gian lận thương mại.
+
+**e) Tuân thủ pháp luật:**
+- Lưu trữ hồ sơ theo yêu cầu của cơ quan nhà nước có thẩm quyền.
+- Hợp tác với cơ quan điều tra khi có yêu cầu bằng văn bản theo quy định.
+
+**3. PHẠM VI CHIA SẺ THÔNG TIN**
+
+PF cam kết không bán, cho thuê hoặc trao đổi thông tin cá nhân của khách hàng cho bên thứ ba vì mục đích thương mại. Tuy nhiên, thông tin có thể được chia sẻ trong các trường hợp sau:
+
+**a) Đối tác cung cấp dịch vụ:**
+- **Đơn vị vận chuyển:** GHTK, Viettel Post, GHN, J&T Express... (chia sẻ tên, số điện thoại, địa chỉ để giao hàng).
+- **Đối tác thanh toán:** VNPay, Momo, ZaloPay, ngân hàng... (chia sẻ thông tin cần thiết để xử lý thanh toán).
+- **Đối tác công nghệ:** Google Analytics, Facebook Pixel (dữ liệu phi nhận dạng cá nhân để phân tích hành vi).
+- **Đối tác vận hành:** Trung tâm chăm sóc khách hàng, kho vận (phục vụ xử lý đơn hàng).
+
+**b) Đối tác chiến lược và chương trình liên kết:**
+- Các chương trình khuyến mãi chung, khi có thông báo rõ ràng và khách hàng đồng ý tham gia.
+- Các đối tác thẻ tín dụng, ví điện tử trong các chương trình ưu đãi đặc biệt.
+
+**c) Bảo vệ pháp lý và quyền lợi:**
+- Khi có yêu cầu từ cơ quan nhà nước có thẩm quyền (theo quy định pháp luật).
+- Khi cần thiết để bảo vệ quyền lợi, tài sản của PF hoặc cộng đồng người dùng.
+- Trong trường hợp sáp nhập, mua lại, chuyển nhượng tài sản (thông tin khách hàng có thể là một phần tài sản được chuyển nhượng, nhưng sẽ tuân thủ cam kết bảo mật hiện hành).
+
+**d) Trừu tượng hóa dữ liệu:**
+- Chia sẻ báo cáo tổng hợp, dữ liệu thống kê đã được ẩn danh (không thể nhận dạng cá nhân) cho đối tác nghiên cứu thị trường, nhà đầu tư.
+
+**4. THỜI GIAN LƯU TRỮ THÔNG TIN**
+
+- **Thông tin tài khoản:** Được lưu trữ cho đến khi khách hàng yêu cầu hủy tài khoản hoặc sau 2 năm tài khoản không hoạt động.
+- **Lịch sử giao dịch:** Được lưu trữ tối thiểu 5 năm theo quy định của pháp luật về kế toán, thuế.
+- **Thông tin liên hệ cho tiếp thị:** Được lưu trữ cho đến khi khách hàng hủy đăng ký nhận tin.
+- **Nhật ký hoạt động:** Được lưu trữ trong 12 tháng để phục vụ phân tích và bảo mật.
+- **Dữ liệu cookie:** Theo thời gian tồn tại của cookie trên trình duyệt (thường 6-24 tháng).
+
+Sau khi hết thời gian lưu trữ, thông tin sẽ được xóa hoặc ẩn danh vĩnh viễn khỏi hệ thống.
+
+**5. QUYỀN CỦA KHÁCH HÀNG ĐỐI VỚI THÔNG TIN CÁ NHÂN**
+
+Theo quy định của pháp luật Việt Nam (Nghị định 13/2023/NĐ-CP về Bảo vệ dữ liệu cá nhân), khách hàng có các quyền sau:
+
+**a) Quyền được biết:** Được thông báo về hoạt động xử lý dữ liệu cá nhân.
+**b) Quyền đồng ý:** Đồng ý hoặc không đồng ý cho phép xử lý dữ liệu cá nhân (trừ trường hợp luật có quy định khác).
+**c) Quyền truy cập:** Được xem, chỉnh sửa hoặc yêu cầu chỉnh sửa dữ liệu cá nhân của mình.
+**d) Quyền rút lại sự đồng ý:** Có quyền rút lại sự đồng ý bất cứ lúc nào (việc rút lại không ảnh hưởng đến tính hợp pháp của việc xử lý dữ liệu trước đó).
+**e) Quyền xóa dữ liệu:** Yêu cầu xóa dữ liệu cá nhân, trừ trường hợp pháp luật có quy định khác.
+**f) Quyền hạn chế xử lý dữ liệu:** Yêu cầu hạn chế xử lý dữ liệu trong một số trường hợp.
+**g) Quyền cung cấp dữ liệu:** Được cung cấp dữ liệu cá nhân của mình dưới định dạng có cấu trúc, thông dụng.
+**h) Quyền phản đối xử lý dữ liệu:** Phản đối việc sử dụng dữ liệu cho mục đích quảng cáo, tiếp thị.
+**i) Quyền khiếu nại, tố cáo:** Khiếu nại lên cơ quan chức năng nếu phát hiện vi phạm.
+**j) Quyền yêu cầu bồi thường:** Yêu cầu bồi thường thiệt hại khi có hành vi vi phạm.
+
+**Cách thực hiện quyền:**
+
+Khách hàng có thể thực hiện các quyền trên bằng cách:
+- **Truy cập tài khoản:** Đăng nhập và chỉnh sửa thông tin tại mục "Tài khoản của tôi".
+- **Liên hệ bộ phận Chăm sóc khách hàng:**
+  * Hotline: 1900 xxxx
+  * Email: privacy@pf.vn
+  * Biểu mẫu: Liên hệ tại website (mục "Hỗ trợ - Quyền riêng tư")
+
+Thời gian xử lý yêu cầu: 5-7 ngày làm việc đối với yêu cầu đơn giản, 15-30 ngày đối với yêu cầu phức tạp (có thông báo cụ thể).
+
+**6. CAM KẾT BẢO MẬT THÔNG TIN**
+
+PF áp dụng các biện pháp bảo mật tiên tiến để bảo vệ thông tin khách hàng:
+
+**a) Biện pháp kỹ thuật:**
+- **Mã hóa SSL 256-bit:** Toàn bộ dữ liệu truyền tải giữa trình duyệt và máy chủ được mã hóa.
+- **Tường lửa ứng dụng web (WAF):** Ngăn chặn tấn công SQL injection, XSS, DDoS.
+- **Mã hóa mật khẩu:** Sử dụng thuật toán bcrypt để mã hóa mật khẩu, không lưu trữ dưới dạng văn bản thuần túy.
+- **Xác thực hai lớp (2FA):** Cho nhân viên và khách hàng (tùy chọn).
+- **Giám sát bảo mật 24/7:** Hệ thống phát hiện và cảnh báo xâm nhập tự động.
+- **Sao lưu dữ liệu:** Hàng ngày, lưu trữ tại nhiều vị trí địa lý khác nhau.
+
+**b) Biện pháp quản lý:**
+- **Chính sách truy cập:** Chỉ nhân viên được ủy quyền mới có quyền truy cập dữ liệu, trên cơ sở cần biết.
+- **Cam kết bảo mật:** Nhân viên ký cam kết bảo mật thông tin khách hàng.
+- **Đào tạo định kỳ:** Nhân viên được đào tạo về an toàn thông tin và bảo vệ dữ liệu.
+- **Kiểm toán định kỳ:** Đánh giá bảo mật hệ thống 6 tháng/lần bởi đơn vị độc lập.
+
+**c) Biện pháp đối với đối tác:**
+- Yêu cầu đối tác ký thỏa thuận bảo mật (NDA) và tuân thủ các tiêu chuẩn bảo mật tương đương.
+- Kiểm tra, giám sát định kỳ việc tuân thủ của đối tác.
+
+**7. SỬ DỤNG COOKIE VÀ CÔNG NGHỆ THEO DÕI**
+
+Website PF sử dụng cookie và các công nghệ tương tự để:
+
+**a) Cookie cần thiết:** Giúp website hoạt động (giỏ hàng, đăng nhập, thanh toán).
+**b) Cookie phân tích:** Google Analytics, Facebook Pixel để đo lường lưu lượng, hành vi người dùng (ẩn danh).
+**c) Cookie quảng cáo:** Tiếp thị lại, hiển thị quảng cáo phù hợp trên các nền tảng đối tác.
+**d) Cookie chức năng:** Ghi nhớ lựa chọn, ngôn ngữ, khu vực.
+
+**Quản lý cookie:**
+- Khách hàng có thể tắt cookie trong cài đặt trình duyệt.
+- Tuy nhiên, việc tắt cookie cần thiết có thể ảnh hưởng đến trải nghiệm mua sắm (không thể thêm giỏ hàng, thanh toán).
+- Công cụ quản lý cookie chi tiết có sẵn khi truy cập website (biểu tượng bánh răng ở góc dưới bên trái).
+
+**8. BẢO MẬT THÔNG TIN THANH TOÁN**
+
+- PF **không lưu trữ** số thẻ tín dụng, mã CVV, mật khẩu tài khoản ngân hàng của khách hàng.
+- Mọi giao dịch thanh toán đều được xử lý qua cổng thanh toán đạt chuẩn bảo mật PCI DSS (Payment Card Industry Data Security Standard).
+- Đối với giao dịch COD: Thông tin chỉ sử dụng để xử lý đơn hàng, không lưu trữ dài hạn.
+- Khách hàng nên bảo mật thông tin thanh toán cá nhân, không chia sẻ OTP/mật khẩu với bất kỳ ai.
+
+**9. XỬ LÝ SỰ CỐ BẢO MẬT**
+
+Trong trường hợp xảy ra sự cố bảo mật (rò rỉ dữ liệu, tấn công hệ thống), PF cam kết:
+
+- **Phát hiện và ngăn chặn ngay lập tức:** Kích hoạt quy trình ứng phó sự cố.
+- **Điều tra nguyên nhân:** Phối hợp với chuyên an ninh mạng để xác định phạm vi, nguyên nhân.
+- **Thông báo cho khách hàng:** Trong vòng 72 giờ, qua email và thông báo trên website nếu sự cố ảnh hưởng đến thông tin cá nhân (theo quy định tại Nghị định 13/2023/NĐ-CP).
+- **Khắc phục:** Sửa lỗi bảo mật, tăng cường các biện pháp phòng ngừa.
+- **Báo cáo cơ quan chức năng:** Theo quy định của pháp luật.
+- **Hỗ trợ khách hàng:** Hướng dẫn các biện pháp bảo vệ tài khoản (đổi mật khẩu, theo dõi giao dịch lạ...).
+
+**10. BẢO MẬT ĐỐI VỚI TRẺ EM**
+
+- Website PF không nhắm đến đối tượng dưới 16 tuổi. PF không chủ động thu thập thông tin của trẻ em dưới 16 tuổi.
+- Nếu phát hiện đã vô tình thu thập thông tin của trẻ dưới 16 tuổi mà không có sự đồng ý của cha mẹ/người giám hộ, PF sẽ tiến hành xóa khỏi hệ thống.
+- Trẻ em dưới 16 tuổi muốn mua hàng cần có sự đồng ý và giám sát của cha mẹ/người giám hộ.
+
+**11. LIÊN HỆ VÀ KHIẾU NẠI**
+
+Mọi thắc mắc, khiếu nại liên quan đến chính sách bảo mật thông tin, vui lòng liên hệ:
+
+- **Bộ phận Bảo mật Dữ liệu (DPO - Data Protection Officer)**
+- **Hotline:** 1900 xxxx (nhánh 5 - Bảo mật)
+- **Email:** privacy@pf.vn (ưu tiên, ghi rõ tiêu đề: "KHIẾU NẠI BẢO MẬT - [Mã khách hàng/số điện thoại]")
+- **Thư từ:** Công ty TNHH PF - Bộ phận Bảo mật Dữ liệu
+  *Địa chỉ: Số xxx, Đường Y, Phường Z, Quận X, TP. Hồ Chí Minh*
+- **Biểu mẫu trực tuyến:** [Liên kết biểu mẫu trên website]
+
+**Thời gian tiếp nhận và xử lý khiếu nại:**
+- Tiếp nhận: 24/7 qua email và biểu mẫu.
+- Phản hồi xác nhận đã nhận: Trong vòng 24 giờ.
+- Giải quyết khiếu nại: Tối đa 15 ngày làm việc (có thể gia hạn nhưng sẽ thông báo cụ thể).
+
+**12. THAY ĐỔI CHÍNH SÁCH**
+
+- PF có quyền cập nhật, thay đổi nội dung Chính sách bảo mật thông tin bất cứ lúc nào để phù hợp với quy định pháp luật và hoạt động kinh doanh.
+- Mọi thay đổi sẽ được đăng tải trên website PF tại mục "Chính sách bảo mật" và ghi rõ ngày cập nhật.
+- Đối với thay đổi quan trọng (ảnh hưởng đến quyền lợi, thay đổi mục đích sử dụng thông tin), PF sẽ thông báo trực tiếp đến khách hàng qua email đã đăng ký ít nhất 15 ngày trước khi có hiệu lực.
+- Việc khách hàng tiếp tục sử dụng dịch vụ sau khi thay đổi chính sách được đăng tải đồng nghĩa với việc chấp nhận các điều khoản mới.
+
+---
+
+**THÔNG TIN ĐƠN VỊ CHỦ QUẢN WEBSITE**
+
+- **Công ty:** Công ty TNHH PF
+- **Mã số thuế:** 0123456789
+- **Địa chỉ trụ sở:** Số xxx, Đường Y, Phường Z, Quận X, TP. Hồ Chí Minh
+- **Giấy phép đăng ký kinh doanh:** Số 0123456789 do Sở Kế hoạch và Đầu tư TP. Hồ Chí Minh cấp ngày DD/MM/YYYY
+
+*(Chính sách này được soạn thảo dựa trên Nghị định 13/2023/NĐ-CP về Bảo vệ dữ liệu cá nhân và các quy định pháp luật liên quan của Việt Nam)*
+
+**Cập nhật lần cuối: Tháng 02/2026**

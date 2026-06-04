@@ -1,0 +1,115 @@
+**CHÍNH SÁCH THANH TOÁN**
+
+**1. CÁC PHƯƠNG THỨC THANH TOÁN**
+
+PF chấp nhận các hình thức thanh toán sau đây:
+
+**a) Thanh toán khi nhận hàng (COD - Cash On Delivery)**
+- Khách hàng thanh toán trực tiếp bằng tiền mặt cho nhân viên giao hàng tại thời điểm nhận sản phẩm.
+- Áp dụng cho tất cả đơn hàng có tổng giá trị dưới 20.000.000 VNĐ (Hai mươi triệu đồng). Đối với đơn hàng có giá trị cao hơn, PF có thể yêu cầu khách hàng thanh toán trước một phần hoặc toàn bộ giá trị đơn hàng.
+- Phí thu hộ (nếu có) sẽ được hiển thị rõ trong quá trình thanh toán.
+
+**b) Chuyển khoản ngân hàng (Bank Transfer)**
+- Khách hàng chuyển tiền vào tài khoản ngân hàng của PF theo thông tin dưới đây:
+
+**Tài khoản:**
+- Ngân hàng: Vietcombank - Chi nhánh Hà Nội
+- Chủ tài khoản: CÔNG TY TNHH PF
+- Số tài khoản: 0123456789
+
+- **Nội dung chuyển khoản bắt buộc:** [Mã đơn hàng] - [Số điện thoại đặt hàng]
+  *Ví dụ: DH123456 - 0909123456*
+
+- Đơn hàng sẽ được xử lý ngay sau khi PF xác nhận đã nhận được tiền trong tài khoản (thường từ 5-15 phút đến 2 giờ làm việc tùy ngân hàng).
+- Trường hợp sau 24 giờ kể từ khi đặt hàng, PF chưa nhận được thanh toán, đơn hàng sẽ tự động bị hủy.
+
+**c) Thanh toán trực tuyến qua cổng thanh toán (Online Payment)**
+- PF liên kết với các cổng thanh toán uy tín, cho phép khách hàng thanh toán bằng:
+  * Thẻ tín dụng/ghi nợ quốc tế (Visa, MasterCard, JCB, American Express)
+  * Thẻ nội địa (ATM) có đăng ký Internet Banking
+  * Ví điện tử (Momo, ZaloPay, VNPay, ShopeePay)
+  * QR Code qua ứng dụng ngân hàng
+
+- Quy trình thanh toán:
+  * Bước 1: Khách hàng chọn phương thức thanh toán trực tuyến tại trang thanh toán.
+  * Bước 2: Hệ thống chuyển hướng đến cổng thanh toán an toàn.
+  * Bước 3: Khách hàng nhập thông tin thẻ/ví và xác thực giao dịch (OTP/App xác thực).
+  * Bước 4: Nhận kết quả giao dịch và được chuyển hướng lại website PF.
+
+- Giao dịch được xem là thành công khi hệ thống PF nhận được xác nhận thanh toán từ cổng thanh toán.
+
+**2. XỬ LÝ GIAO DỊCH THANH TOÁN**
+
+**a) Xác nhận đơn hàng**
+- Đối với thanh toán COD: Đơn hàng được xác nhận ngay sau khi khách hàng hoàn tất đặt hàng và PF liên hệ xác nhận qua điện thoại (nếu cần).
+- Đối với thanh toán trước (chuyển khoản/trực tuyến): Đơn hàng chỉ được xác nhận sau khi PF nhận được thanh toán thành công.
+
+**b) Thời gian xử lý**
+- Giao dịch thanh toán trực tuyến được xử lý ngay lập tức (24/7).
+- Giao dịch chuyển khoản được đối soát thủ công trong giờ hành chính (8:00 - 17:00, thứ Hai đến thứ Sáu; 8:00 - 12:00 thứ Bảy). Chuyển khoản ngoài giờ sẽ được xử lý vào ngày làm việc tiếp theo.
+
+**c) Hóa đơn GTGT (VAT)**
+- PF có trách nhiệm xuất hóa đơn GTGT theo quy định của pháp luật.
+- Khách hàng có nhu cầu lấy hóa đơn VAT vui lòng cung cấp đầy đủ thông tin:
+  * Tên công ty, mã số thuế
+  * Địa chỉ công ty
+  * Email nhận hóa đơn điện tử
+- Yêu cầu xuất hóa đơn phải được ghi chú rõ trong phần thông tin đặt hàng hoặc thông báo cho PF trước khi đơn hàng được giao.
+- Hóa đơn sẽ được gửi qua email trong vòng 5 ngày làm việc kể từ khi đơn hàng hoàn tất.
+
+**d) Hủy đơn hàng đã thanh toán**
+- Trường hợp khách hàng hủy đơn hàng đã thanh toán trước khi giao hàng:
+  * PF sẽ hoàn lại 100% số tiền đã thanh toán.
+  * Thời gian hoàn tiền: 5-7 ngày làm việc đối với chuyển khoản, 7-15 ngày làm việc đối với thanh toán qua thẻ tín dụng (tùy theo quy định ngân hàng phát hành thẻ).
+
+**3. NGUYÊN TẮC BẢO MẬT THANH TOÁN**
+
+- Mọi giao dịch thanh toán trực tuyến đều được bảo mật theo tiêu chuẩn bảo mật quốc tế (PCI DSS).
+- PF không lưu trữ thông tin thẻ tín dụng/thẻ ghi nợ của khách hàng. Mọi thông tin thẻ được nhập trực tiếp trên cổng thanh toán của đối tác.
+- Khách hàng không được cung cấp thông tin thẻ/ tài khoản ngân hàng cho bất kỳ ai tự xưng là nhân viên PF qua điện thoại, email hoặc tin nhắn. PF không bao giờ yêu cầu khách hàng cung cấp mật khẩu, mã OTP, CVV/CVC của thẻ.
+
+**4. XỬ LÝ SAI SÓT TRONG THANH TOÁN**
+
+**a) Trường hợp khách hàng chuyển khoản sai nội dung**
+- Khách hàng vui lòng liên hệ ngay với bộ phận Chăm sóc khách hàng, cung cấp:
+  * Mã đơn hàng (nếu có)
+  * Ảnh chụp màn hình giao dịch hoặc sao kê chuyển tiền
+  * Số điện thoại đặt hàng
+- PF sẽ phối hợp với ngân hàng để xác minh và xử lý trong vòng 3-5 ngày làm việc.
+
+**b) Trường hợp khách hàng chuyển khoản trùng/thiếu/dư tiền**
+- Chuyển trùng: PF sẽ hoàn trả số tiền chuyển trùng sau khi xác minh (trừ phí ngân hàng nếu có).
+- Chuyển thiếu: PF sẽ liên hệ khách hàng để yêu cầu chuyển bổ sung phần còn thiếu.
+- Chuyển dư: Số tiền dư sẽ được chuyển vào ví PF của khách hàng để sử dụng cho lần mua sắm tiếp theo hoặc được hoàn trả theo yêu cầu (trừ phí ngân hàng nếu có).
+
+**c) Trường hợp giao dịch trực tuyến thành công nhưng đơn hàng không được xác nhận**
+- Khách hàng vui lòng chụp màn hình giao dịch thành công (có mã giao dịch, thời gian, số tiền) và liên hệ ngay với bộ phận Chăm sóc khách hàng.
+- PF sẽ phối hợp với đối tác cổng thanh toán để xác minh và xử lý trong vòng 24-48 giờ.
+
+**5. CHÍNH SÁCH HOÀN TIỀN**
+
+- Các trường hợp được hoàn tiền:
+  * Đơn hàng bị hủy do PF không thể đáp ứng (hết hàng, không liên lạc được khách hàng, sai thông tin…)
+  * Khách hàng hủy đơn hàng đã thanh toán trước khi giao hàng (theo mục 2d)
+  * Sản phẩm trả lại đủ điều kiện theo Chính sách đổi trả
+  * Giao dịch lỗi, trùng, sai sót
+
+- Hình thức hoàn tiền:
+  * Chuyển khoản ngân hàng (ưu tiên)
+  * Nạp lại vào ví PF (nếu khách hàng đồng ý, được cộng thêm 5% giá trị hoàn)
+  * Hoàn tiền mặt trực tiếp tại cửa hàng (nếu có)
+
+- Thời gian hoàn tiền:
+  * Hoàn qua ví PF: 24 giờ sau khi xác nhận
+  * Hoàn qua chuyển khoản: 3-5 ngày làm việc
+  * Hoàn qua thẻ tín dụng/thẻ ghi nợ: 7-15 ngày làm việc
+
+**6. CÁC ĐIỀU KHOẢN KHÁC**
+
+- PF có quyền từ chối hoặc tạm ngưng xử lý đơn hàng nếu phát hiện giao dịch có dấu hiệu gian lận, rửa tiền, sử dụng thẻ/tài khoản bất hợp pháp.
+- Mọi khiếu nại, thắc mắc liên quan đến thanh toán, khách hàng vui lòng liên hệ:
+  * Hotline: 1900 xxxx (8:00 - 21:00 tất cả các ngày trong tuần)
+  * Email: support@pf.vn
+  * Fanpage: facebook.com/pf.vietnam
+
+- Chính sách thanh toán này là một phần không thể tách rời của Chính sách bán hàng và có hiệu lực kể từ ngày công bố. PF có quyền sửa đổi, bổ sung chính sách mà không cần thông báo trước. Mọi thay đổi sẽ được cập nhật trên website.
