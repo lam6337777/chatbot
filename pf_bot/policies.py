@@ -12,7 +12,7 @@ Trọng số chọn bằng tests/eval_retrieval.py (32 câu hỏi diễn đạt 
     semantic Hit@1 88%  Hit@3 97%  MRR 0.922
     hybrid   Hit@1 91%  Hit@3 97%  MRR 0.938
 
-Embedding các đoạn được tính một lần và lưu ở .cache/policy_embeddings.json; tự tính lại khi
+Embedding các đoạn được tính một lần và lưu ở pf_bot/embeddings/<model>.json (commit cùng code); tự tính lại khi
 nội dung tài liệu hoặc model thay đổi. Nếu không gọi được model embedding (Ollama tắt / chưa
 pull model) thì tự quay về chỉ dùng điểm từ khóa — chatbot vẫn trả lời được.
 """
@@ -24,7 +24,9 @@ import os
 import re
 from collections import Counter
 
-from openai import OpenAI
+import time
+
+from openai import OpenAI, RateLimitError
 
 from .config import EMBED_API_KEY, EMBED_BASE_URL, EMBED_MODEL, POLICY_DIR, ROOT_DIR
 from .text import norm
@@ -70,7 +72,9 @@ _HEADING = re.compile(r"^\**\s*(?:[A-Z]\.|\d+(?:\.\d+)*\.)?\s*[A-ZÀ-Ỹ0-9][^\n
 _chunks: list[dict] | None = None
 _embed_ok: bool | None = None  # None = chưa thử
 _client = OpenAI(api_key=EMBED_API_KEY or "none", base_url=EMBED_BASE_URL, timeout=30, max_retries=1)
-_CACHE = os.path.join(ROOT_DIR, ".cache", "policy_embeddings.json")
+# Mỗi model một file, COMMIT cùng code: server (Render free ngủ/thức liên tục) không phải tạo lại
+# embedding mỗi lần khởi động — gói free của Gemini chỉ ~100 embedding/phút.
+_CACHE = os.path.join(ROOT_DIR, "pf_bot", "embeddings", re.sub(r"[^\w.-]", "_", EMBED_MODEL) + ".json")
 
 
 # ── Chia đoạn ──────────────────────────────────────────────────────────────────
@@ -161,10 +165,21 @@ def _normalize(v):
     return [x / n for x in v]
 
 
-def _embed(texts: list[str]) -> list[list[float]]:
+def _embed(texts: list[str], patient: bool = False) -> list[list[float]]:
+    """patient=True (lúc tạo chỉ mục): gặp giới hạn tốc độ (429) thì chờ rồi thử lại —
+    gói free của Gemini chỉ cho ~100 embedding/phút, ít hơn số đoạn chính sách."""
     out = []
-    for i in range(0, len(texts), 32):
-        resp = _client.embeddings.create(model=EMBED_MODEL, input=texts[i:i + 32])
+    batch = 20 if patient else 32
+    for i in range(0, len(texts), batch):
+        for attempt in range(4 if patient else 1):
+            try:
+                resp = _client.embeddings.create(model=EMBED_MODEL, input=texts[i:i + batch])
+                break
+            except RateLimitError:
+                if not patient or attempt == 3:
+                    raise
+                log.info("RAG: chạm giới hạn embedding, chờ 65 giây rồi thử lại…")
+                time.sleep(65)
         out.extend(_normalize(d.embedding) for d in resp.data)
     return out
 
@@ -187,16 +202,21 @@ def _ensure_embeddings() -> bool:
     except (OSError, ValueError, KeyError):
         pass
     try:
-        vectors = _embed([c["text"] for c in _chunks])
+        vectors = _embed([c["text"] for c in _chunks], patient=True)
     except Exception as e:
         log.warning("RAG: không tạo được embedding (%s) — chỉ tìm theo từ khóa", e)
         _embed_ok = False
         return False
     for c, v in zip(_chunks, vectors):
         c["vec"] = v
-    os.makedirs(os.path.dirname(_CACHE), exist_ok=True)
-    with open(_CACHE, "w", encoding="utf-8") as f:
-        json.dump({"fingerprint": fingerprint, "model": EMBED_MODEL, "vectors": vectors}, f)
+    try:
+        os.makedirs(os.path.dirname(_CACHE), exist_ok=True)
+        with open(_CACHE, "w", encoding="utf-8") as f:
+            # làm tròn 5 chữ số để file nhỏ (độ chính xác cosine không đổi đáng kể)
+            json.dump({"fingerprint": fingerprint, "model": EMBED_MODEL,
+                       "vectors": [[round(x, 5) for x in v] for v in vectors]}, f, separators=(",", ":"))
+    except OSError as e:
+        log.warning("RAG: không ghi được cache embedding (%s)", e)
     _embed_ok = True
     log.info("RAG: đã tạo embedding cho %d đoạn (model %s)", len(_chunks), EMBED_MODEL)
     return True
