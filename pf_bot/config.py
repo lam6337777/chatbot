@@ -55,7 +55,7 @@ else:
 LLM_MAX_TOKENS = int(os.environ.get("LLM_MAX_TOKENS", 512))
 LLM_TEMPERATURE = float(os.environ.get("LLM_TEMPERATURE", 0.3))
 
-# Số tin nhắn gần nhất đưa vào ngữ cảnh khi trả lời
+# Số tin nhắn gần nhất đưa vào ngữ cảnh khi trả lời: 6 tin = 3 lượt hỏi–đáp gần nhất
 HISTORY_TURNS = 6
 
 # ── Database (chỉ dùng để lưu lịch sử chat AI) ──────────────────────────────────

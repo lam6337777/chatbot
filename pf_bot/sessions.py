@@ -1,4 +1,5 @@
 """Lưu phiên chat AI vào 2 bảng có sẵn: ai_chat_sessions, ai_chat_messages."""
+import re
 import json
 
 import psycopg2
@@ -88,7 +89,9 @@ def recent_history(session_id: int, n: int):
     with _Conn() as cur:
         cur.execute("SELECT role, content FROM ai_chat_messages WHERE session_id = %s ORDER BY created_at DESC, id DESC LIMIT %s",
                     (session_id, n))
-        return list(reversed(cur.fetchall()))
+        rows = list(reversed(cur.fetchall()))
+    # Bỏ phần JSON thẻ sản phẩm lưu kèm cuối nội dung — chỉ đưa lời thoại vào ngữ cảnh LLM
+    return [{"role": r["role"], "content": re.sub(r"\n?<!--pf:.*?-->", "", r["content"], flags=re.S).strip()} for r in rows]
 
 
 def add_message(session_id: int, role: str, content: str, intent: str | None = None, extra: dict | None = None):

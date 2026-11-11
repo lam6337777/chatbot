@@ -29,7 +29,7 @@ import time
 from openai import OpenAI, RateLimitError
 
 from .config import EMBED_API_KEY, EMBED_BASE_URL, EMBED_MODEL, POLICY_DIR, ROOT_DIR
-from .text import norm
+from .text import has_any, norm
 
 log = logging.getLogger("pf_bot.rag")
 
@@ -241,7 +241,7 @@ def _keyword_scores(query: str) -> list[float]:
     return [sum(1 for t in qset if t in c["tokens"]) + 2 * sum(1 for b in qb if b in c["bigrams"]) for c in _chunks]
 
 
-def search(query: str, topic: str = "general", k: int = 3, mode: str = "hybrid") -> list[dict]:
+def search(query: str, topic: str = "general", k: int = 3, mode: str = "hybrid", boost_sections: tuple = ()) -> list[dict]:
     """Trả về k đoạn tốt nhất kèm điểm. mode: hybrid | semantic | keyword (để so sánh khi đánh giá)."""
     if _chunks is None:
         _load()
@@ -267,10 +267,36 @@ def search(query: str, topic: str = "general", k: int = 3, mode: str = "hybrid")
             score = W_SEMANTIC * sem + W_KEYWORD * kn
         if c["file"] in topic_files and mode == "hybrid":
             score += W_TOPIC
+        # Câu hỏi khớp một mục cụ thể (vd "bảo hành bao lâu" → mục THỜI HẠN BẢO HÀNH): đẩy mục đó lên đầu
+        if boost_sections and any(b in norm(c["text"].split("\n", 1)[0]) for b in boost_sections):
+            score += 0.2
         scored.append({"file": c["file"], "text": c["text"], "score": score, "semantic": sem, "keyword": kn})
     scored.sort(key=lambda x: -x["score"])
     return scored[:k]
 
 
+# Cách khách hay hỏi → thuật ngữ trong tài liệu. "Bảo hành bao lâu" phải ra bảng THỜI HẠN BẢO HÀNH,
+# không phải mục phạm vi/điều kiện có nhiều từ "bảo hành" hơn.
+# (chủ đề, cách hỏi, từ bổ sung vào câu truy vấn, tiêu đề mục cần ưu tiên — dạng không dấu)
+_EXPANSIONS = [
+    (("bao hanh",), ("bao lau", "may thang", "bao nhieu thang", "thoi han", "bao nhieu lau"),
+     "thời hạn bảo hành thời gian bảo hành tháng", "thoi han bao hanh"),
+    (("bao hanh",), ("the nao", "nhu the nao", "ra sao", "chinh sach"),
+     "thời hạn bảo hành", "thoi han bao hanh"),
+    (("doi tra", "doi hang", "tra hang", "doi size"), ("bao lau", "may ngay", "thoi han", "trong vong"),
+     "thời hạn đổi trả ngày kể từ khi nhận hàng", "doi tra"),
+    (("hoan tien",), ("bao lau", "may ngay", "khi nao"), "thời gian hoàn tiền ngày làm việc", "hoan tien"),
+]
+
+
+def _expand(query: str) -> tuple[str, tuple]:
+    t = norm(query)
+    hits = [(add, sec) for subj, asks, add, sec in _EXPANSIONS if has_any(t, list(subj)) and has_any(t, list(asks))]
+    if not hits:
+        return query, ()
+    return query + " " + " ".join(a for a, _ in hits), tuple(sec for _, sec in hits)
+
+
 def retrieve(query: str, topic: str = "general", k: int = 3) -> list[str]:
-    return [h["text"] for h in search(query, topic, k)]
+    q, sections = _expand(query)
+    return [h["text"] for h in search(q, topic, k, boost_sections=sections)]

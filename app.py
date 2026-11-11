@@ -12,6 +12,8 @@ import uvicorn
 from fastapi import Depends, FastAPI, Header, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
+from typing import Literal
+
 from pydantic import BaseModel, Field
 
 import threading
@@ -80,9 +82,16 @@ class Rename(BaseModel):
     title: str = Field(min_length=1, max_length=120)
 
 
+class HistoryItem(BaseModel):
+    role: Literal["user", "bot"]
+    content: str = Field(max_length=2000)
+
+
 class Ask(BaseModel):
     message: str = Field(min_length=1, max_length=500)
     session_id: int | None = None
+    # Khách chưa đăng nhập không có phiên lưu ở server → widget gửi kèm vài lượt gần nhất để giữ ngữ cảnh
+    history: list[HistoryItem] = Field(default_factory=list, max_length=20)
 
 
 @app.on_event("startup")
@@ -163,6 +172,8 @@ def chat_stream(body: Ask, auth=Depends(optional_user), x_forwarded_for: str | N
         else:
             session_id = sessions.create_session(user["id"], question[:60])["id"]
         sessions.add_message(session_id, "user", question)
+    else:
+        history = [{"role": h.role, "content": h.content[:1000]} for h in body.history[-HISTORY_TURNS:] if h.content.strip()]
     # Khách chưa đăng nhập không có phiên → không giữ trạng thái giữa các câu (tránh lẫn giữa các khách)
     state = _state[session_id] if session_id else {}
 

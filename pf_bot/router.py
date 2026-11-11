@@ -213,7 +213,8 @@ def route_rules(text: str) -> Route | None:
 
     if has_any(t, ["phi ship", "phi van chuyen", "phi giao", "tien ship", "ship bao nhieu", "freeship", "free ship",
                    "mien phi van chuyen", "mien phi ship", "ship ve", "ship toi", "ship den", "giao ve", "giao den",
-                   "giao mat bao lau", "giao bao lau", "bao lau thi nhan", "may ngay nhan", "bao nhieu ngay"]):
+                   "giao mat bao lau", "giao bao lau", "bao lau thi nhan", "may ngay nhan", "bao nhieu ngay",
+                   "thoi gian giao", "mat may ngay", "may ngay thi nhan", "bao lau nhan"]):
         return Route("shipping", {"province": parse_province(text)})
 
     productish = has_any(t, _PRODUCT_WORDS) or parse_brand(t) or parse_category(t)

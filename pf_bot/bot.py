@@ -77,6 +77,31 @@ def _history_msgs(history: list[dict]) -> list[dict]:
     return out
 
 
+_CONDENSE_PROMPT = """Bạn viết lại câu hỏi MỚI NHẤT của khách thành một câu hỏi ĐẦY ĐỦ, tự hiểu được mà không cần đọc đoạn hội thoại.
+- Bổ sung từ hội thoại trước những gì câu mới đang ám chỉ: tên/hãng/loại giày, size, mức giá, tỉnh thành, mã đơn, chủ đề chính sách.
+  Ví dụ: trước đó hỏi "giày chạy bộ Nike dưới 2 triệu", giờ hỏi "còn size 44 không" → "Giày chạy bộ Nike dưới 2 triệu còn size 44 không".
+- Nếu câu mới đã đủ nghĩa hoặc chuyển sang chủ đề khác, giữ NGUYÊN câu đó.
+- Không trả lời câu hỏi, không thêm thông tin không có trong hội thoại. Viết bằng tiếng Việt.
+Trả về JSON: {"question": "..."}"""
+
+
+def _condense(question: str, history: list[dict]) -> str:
+    """Câu hỏi nối tiếp ("thế còn size 44?", "ship về Hà Nội thì sao?") → câu hỏi độc lập để định tuyến/tra cứu đúng."""
+    if not any(m.get("role") == "user" for m in history):
+        return question
+    lines = []
+    for m in history[-6:]:
+        who = "Khách" if m.get("role") == "user" else "Shop"
+        lines.append(f"{who}: {(m.get('content') or '').strip()[:300]}")
+    try:
+        out = llm.complete_json(_CONDENSE_PROMPT, "HỘI THOẠI:\n" + "\n".join(lines) + f"\n\nCÂU MỚI: {question}", max_tokens=120)
+    except llm.LLMUnavailable:
+        return question
+    q = (out.get("question") or "").strip()
+    # Câu viết lại bất thường (rỗng, quá dài) → dùng câu gốc
+    return q if 0 < len(q) <= 300 else question
+
+
 def _llm_answer(question: str, docs: list[str], history: list[dict], extra: str = ""):
     context = "\n\n---\n\n".join(docs)
     system = f"{PERSONA}\n\nTÀI LIỆU:\n{context}{chr(10) + extra if extra else ''}"
@@ -313,14 +338,12 @@ def _policy(r: Route, question: str, ctx):
                      f"miễn phí ship cho đơn từ {vnd(q.get('freeShippingThreshold'))}.")
         except backend.BackendError:
             pass
-    # Không đưa lịch sử vào: chủ đề đã xác định từ chính câu hỏi, lịch sử (vd danh sách sản phẩm)
-    # dễ làm model nhỏ trả lời lạc đề
-    yield from _llm_answer(question, docs, [], extra)
+    yield from _llm_answer(question, docs, ctx["history"], extra)
 
 
 def _general(question: str, ctx):
     docs = policies.retrieve(question, "general", k=2)
-    yield from _llm_answer(question, docs, ctx["history"][-2:])
+    yield from _llm_answer(question, docs, ctx["history"])
 
 
 TEMPLATES = {
@@ -342,7 +365,12 @@ TEMPLATES = {
 def _respond(question: str, history: list[dict], jwt: str | None, state: dict):
     t0 = time.time()
     user = backend.current_user(jwt)
-    ctx = {"jwt": jwt if user else None, "user": user, "history": history[-6:], "state": state}
+    history = history[-6:]  # 3 lượt hỏi–đáp gần nhất
+    ctx = {"jwt": jwt if user else None, "user": user, "history": history, "state": state}
+    original = question
+    question = _condense(question, history)
+    if question != original:
+        log.info("condensed: %r -> %r", original, question)
     r = route(question)
     log.info("route=%s params=%s source=%s (%.2fs)", r.intent, r.params, r.source, time.time() - t0)
     yield {"type": "meta", "intent": r.intent}
