@@ -136,7 +136,7 @@ PF có quyền từ chối bảo hành trong các trường hợp sau:
 **H: Tôi có thể gửi bảo hành qua đường bưu điện không?**
 Đ: Có, bạn vui lòng gửi về địa chỉ trung tâm bảo hành và gửi kèm thông tin theo hướng dẫn ở mục 4.
 
-**H: Thời gian bảo hành mất bao lâu?**
+**H: Thời gian xử lý bảo hành mất bao lâu?**
 Đ: Thông thường từ 5-10 ngày làm việc. Với các trường hợp phức tạp, có thể kéo dài hơn và PF sẽ thông báo trước cho bạn.
 
 **9. LIÊN HỆ BẢO HÀNH**

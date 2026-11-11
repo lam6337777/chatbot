@@ -198,7 +198,7 @@ Bảo hành áp dụng cho lỗi kỹ thuật từ nhà sản xuất:
 - Sản phẩm đã qua sửa chữa không thuộc hệ thống PF
 - Mất tem bảo hành, hóa đơn mua hàng
 
-**27. Thời gian bảo hành mất bao lâu?**
+**27. Thời gian xử lý bảo hành mất bao lâu?**
 
 Thông thường từ 5-10 ngày làm việc, tùy mức độ hư hỏng và tình trạng linh kiện thay thế.
 
