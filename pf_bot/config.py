@@ -28,14 +28,21 @@ if LLM_PROVIDER == "gemini":
     EMBED_BASE_URL = GEMINI_BASE_URL
     EMBED_API_KEY = LLM_API_KEY
     EMBED_MODEL = os.environ.get("GEMINI_EMBED_MODEL", "gemini-embedding-001")
-elif LLM_PROVIDER == "openai":
+elif LLM_PROVIDER in ("deepseek", "openai"):
+    _ds = LLM_PROVIDER == "deepseek"
     LLM_BASE_URL = os.environ.get("LLM_BASE_URL", "https://api.deepseek.com")
-    LLM_API_KEY = os.environ.get("LLM_API_KEY", "")
+    LLM_API_KEY = os.environ.get("DEEPSEEK_API_KEY" if _ds else "LLM_API_KEY", "") or os.environ.get("LLM_API_KEY", "")
     LLM_MODEL = os.environ.get("LLM_MODEL", "deepseek-chat")
-    # Embedding vẫn lấy từ Ollama trừ khi chỉ định khác
-    EMBED_BASE_URL = os.environ.get("EMBED_BASE_URL", OLLAMA_BASE_URL)
-    EMBED_API_KEY = os.environ.get("EMBED_API_KEY", "ollama")
-    EMBED_MODEL = os.environ.get("EMBED_MODEL", "bge-m3")
+    # DeepSeek không có API embedding → RAG dùng Gemini nếu có GEMINI_API_KEY, ngược lại dùng Ollama
+    _gemini_key = os.environ.get("GEMINI_API_KEY", "")
+    if "EMBED_BASE_URL" not in os.environ and _gemini_key:
+        EMBED_BASE_URL = GEMINI_BASE_URL
+        EMBED_API_KEY = _gemini_key
+        EMBED_MODEL = os.environ.get("GEMINI_EMBED_MODEL", "gemini-embedding-001")
+    else:
+        EMBED_BASE_URL = os.environ.get("EMBED_BASE_URL", OLLAMA_BASE_URL)
+        EMBED_API_KEY = os.environ.get("EMBED_API_KEY", "ollama")
+        EMBED_MODEL = os.environ.get("EMBED_MODEL", "bge-m3")
 else:
     LLM_PROVIDER = "ollama"
     LLM_BASE_URL = OLLAMA_BASE_URL
